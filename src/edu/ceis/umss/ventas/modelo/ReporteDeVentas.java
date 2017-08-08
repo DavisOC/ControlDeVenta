@@ -5,12 +5,14 @@
  */
 package edu.ceis.umss.ventas.modelo;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.List;
-import java.io.*;
 
 /**
- *
  * @author
  */
 public class ReporteDeVentas {
@@ -23,6 +25,10 @@ public class ReporteDeVentas {
         count = 0;
     }
 
+    public static void setReporteDeVentas(List<Transaccion> reporteDeVentas) {
+        ReporteDeVentas.reporteDeVentas = reporteDeVentas;
+    }
+
     public ListaDeVentas getListaDeVentas() {
         return listaDeVentas;
     }
@@ -30,10 +36,6 @@ public class ReporteDeVentas {
     public void setListaDeVentas(ListaDeVentas listaDeVentas) {
         reporteDeVentas = listaDeVentas.getListaDeVentas();
         this.listaDeVentas = listaDeVentas;
-    }
-
-    public static void setReporteDeVentas(List<Transaccion> reporteDeVentas) {
-        ReporteDeVentas.reporteDeVentas = reporteDeVentas;
     }
 
     public File generarArchivo(String ruta) throws ParseException {
@@ -52,7 +54,7 @@ public class ReporteDeVentas {
                 pw.println(" Nombre del Producto  |  Codigo  |  Precio Unitario  |  Fecha de Vencemiento  ");
                 for (Producto producto : transaccion10.getProductosVendidos()) {
                     pw.printf("%-25s %-15s %-15s %-10s %n", "    "
-                            + producto.getNombre(),
+                                    + producto.getNombre(),
                             producto.getCodigo(),
                             producto.getPrecioUnitario(),
                             producto.getFechaDeVencimiento().toString());
@@ -61,12 +63,9 @@ public class ReporteDeVentas {
                 pw.println(" Costo Total de la Transaccion :  " + transaccion10.getTotalVenta() + " Bs");
                 pw.println("");
             }
-
         } catch (IOException e) {
         } finally {
             try {
-                // Nuevamente aprovechamos el finally para 
-                // asegurarnos que se cierra el fichero.
                 if (null != fichero) {
                     fichero.close();
                 }
@@ -74,7 +73,5 @@ public class ReporteDeVentas {
             }
         }
         return new File(ruta);
-
     }
-
 }

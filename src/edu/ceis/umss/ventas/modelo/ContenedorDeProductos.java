@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
  * @author
  */
 public class ContenedorDeProductos {
@@ -18,7 +17,6 @@ public class ContenedorDeProductos {
 
     public ContenedorDeProductos() {
         contenedorDeProducto = new HashMap<>();
-
     }
 
     public void aniadirProducto(Producto producto) {
@@ -34,9 +32,7 @@ public class ContenedorDeProductos {
     }
 
     public Producto buscarProducto(long codigo) {
-        Producto producto = null;
-            producto = contenedorDeProducto.get(codigo);
-            System.out.println("No existe producto en el contendor");
+        Producto producto = contenedorDeProducto.get(codigo);
         return producto;
     }
 
@@ -48,7 +44,6 @@ public class ContenedorDeProductos {
 
     public void eliminarProducto(long codigo) {
         Producto producto = contenedorDeProducto.remove(codigo);
-
         System.out.println("Producto eliminado: " + producto.getNombre());
     }
 

@@ -11,7 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- *
  * @author
  */
 public class Producto {
@@ -24,7 +23,6 @@ public class Producto {
     private int cantidad;
 
     public Producto(String nombre, long codigo, double precioUnitario, String fechaDeVencimiento) throws ParseException {
-
         this.nombre = nombre;
         this.codigo = codigo;
         this.precioUnitario = precioUnitario;
@@ -52,16 +50,16 @@ public class Producto {
         return codigo;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setCodigo(long codigo) {
+        this.codigo = codigo;
     }
 
     public int getCantidad() {
         return cantidad;
     }
 
-    public void setCodigo(long codigo) {
-        this.codigo = codigo;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public double getPrecioUnitario() {

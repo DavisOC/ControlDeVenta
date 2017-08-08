@@ -21,19 +21,23 @@ public class Main {
 
     public static void main(String[] args) throws ParseException {
         ContenedorDeProductos contenedor = new ContenedorDeProductos();
-        Producto lataTaqinia = new Producto("Yougurt", 12421354235L, 7.50D, "10/10/2017");
-        Producto cervezaTauina = new Producto("Pepsi de litro", 1234565748L, 15.0D, "20/12/2018");
-        Producto lataPacenia = new Producto("Coca cola en lata ", 123456789L, 7.0D, "15/11/2018");
-        Producto cerveElHinca = new Producto("Cerveza el Hinca de litro", 12345678L, 15.5D, "05/05/2018");
-        Producto cervhenini = new Producto("Cerveza Heiniken", 301300256L, 18.0D, "01/01/2019");
-        Producto pepsi = new Producto("Pepsi de 3 litros", 3654789L, 11.0D, "08/08/2020");
+        Producto chicolac = new Producto("Chicolac", 12421354235L, 0.50, "01/01/2017");
+        Producto mani = new Producto("Mani", 1234565748L, 5.0D, "01/01/2017");
+        Producto cocacola = new Producto("Coca Cola", 123456789L, 5.0D, "01/01/2017");
+        Producto leche = new Producto("Leche", 12345678L, 5.5D, "01/01/2017");
+        Producto chizito = new Producto("Chizito", 301300256L, 2.0D, "01/01/2017");
+        Producto galleta = new Producto("Galleta", 3654789L, 3.0D, "01/01/2017");
+        Producto yogurt = new Producto("Yogurt", 2587948L, 10.5D, "01/01/2017");
+        Producto masticable = new Producto("Masticable", 36521458L, 0.1D, "01/01/2017");
 
-        contenedor.aniadirProducto(lataTaqinia);
-        contenedor.aniadirProducto(cervezaTauina);
-        contenedor.aniadirProducto(lataPacenia);
-        contenedor.aniadirProducto(cerveElHinca);
-        contenedor.aniadirProducto(cervhenini);
-        contenedor.aniadirProducto(pepsi);
+        contenedor.aniadirProducto(chicolac);
+        contenedor.aniadirProducto(mani);
+        contenedor.aniadirProducto(cocacola);
+        contenedor.aniadirProducto(leche);
+        contenedor.aniadirProducto(chizito);
+        contenedor.aniadirProducto(galleta);
+        contenedor.aniadirProducto(yogurt);
+        contenedor.aniadirProducto(masticable);
         Date fechaActual = new Date();
 
         DateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
