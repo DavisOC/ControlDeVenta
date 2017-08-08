@@ -15,7 +15,7 @@ import java.util.Date;
 
 /**
  *
- * @author Denis
+ * @author
  */
 public class Main {
 

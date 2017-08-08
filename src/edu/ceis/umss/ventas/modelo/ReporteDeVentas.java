@@ -11,7 +11,7 @@ import java.io.*;
 
 /**
  *
- * @author Publica
+ * @author
  */
 public class ReporteDeVentas {
 

@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  *
- * @author Publica
+ * @author
  */
 public class ContenedorDeProductos {
 

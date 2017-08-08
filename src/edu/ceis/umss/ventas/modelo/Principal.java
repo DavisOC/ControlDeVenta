@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  *
- * @author FUNDACIONJALA\jhonatan^mamani
+ * @author
  */
 public class Principal {
 

@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Emanuel
+ * @author
  */
 public class Transaccion {
     

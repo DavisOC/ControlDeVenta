@@ -8,7 +8,7 @@ package edu.ceis.umss.ventas.modelo;
 import java.text.ParseException;
 /**
  *
- * @author daniel y el grupo Lastima!!!!!!!
+ * @author
  */
 public class ProductoCompuesto extends Producto {
 

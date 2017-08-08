@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author Publica
+ * @author
  */
 public class Producto {
 
