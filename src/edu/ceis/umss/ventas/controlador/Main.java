@@ -7,6 +7,7 @@ package edu.ceis.umss.ventas.controlador;
 
 import edu.ceis.umss.ventas.modelo.ContenedorDeProductos;
 import edu.ceis.umss.ventas.modelo.Producto;
+import edu.ceis.umss.ventas.vista.VentanaPrincipal;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -43,5 +44,6 @@ public class Main {
         DateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
         String fecha = formater.format(fechaActual);
         System.out.println("date " + fecha);
+        VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
     }
 }
