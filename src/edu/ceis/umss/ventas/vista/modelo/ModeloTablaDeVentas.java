@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author Softure04
+ * @author
  */
 public class ModeloTablaDeVentas extends AbstractTableModel {
 

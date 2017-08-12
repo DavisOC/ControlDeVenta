@@ -78,15 +78,15 @@ public class PanelBusquedaYseleccion extends JPanel {
         transaccion.setProductosVendidos(modelo.getListaDeVentas());
         ventas.aniadirTransaccion(transaccion);
         reporte.setListaDeVentas(ventas);
-
-        try {
-            String ruta = PanelLogo.class.getResource("Salida").getPath();
-            reporte.generarArchivo(ruta);
-            ventas.eliminarTransaccion(transaccion);
-            ReporteDeVentas.setReporteDeVentas(new ArrayList<Transaccion>());
-            reporte.setListaDeVentas(ventas);
-        } catch (ParseException ex) {
-            Logger.getLogger(PanelBusquedaYseleccion.class.getName()).log(Level.SEVERE, null, ex);
+        if (!transaccion.getProductosVendidos().isEmpty()) {
+            try {
+                reporte.generarArchivo("");
+                ventas.eliminarTransaccion(transaccion);
+                ReporteDeVentas.setReporteDeVentas(new ArrayList<Transaccion>());
+                reporte.setListaDeVentas(ventas);
+            } catch (ParseException ex) {
+                Logger.getLogger(PanelBusquedaYseleccion.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         modelo.setLista(new ArrayList<Producto>());
         modelo.setPrecio(0.0);

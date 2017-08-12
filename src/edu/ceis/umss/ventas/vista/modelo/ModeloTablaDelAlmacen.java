@@ -8,15 +8,15 @@ package edu.ceis.umss.ventas.vista.modelo;
 import edu.ceis.umss.ventas.modelo.ContenedorDeProductos;
 import edu.ceis.umss.ventas.modelo.Producto;
 
+import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author Denis
+ * @author
  */
 public class ModeloTablaDelAlmacen extends AbstractTableModel {
 
