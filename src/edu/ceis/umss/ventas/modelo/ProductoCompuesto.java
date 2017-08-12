@@ -6,8 +6,8 @@
 package edu.ceis.umss.ventas.modelo;
 
 import java.text.ParseException;
-
 /**
+ *
  * @author
  */
 public class ProductoCompuesto extends Producto {
@@ -15,10 +15,10 @@ public class ProductoCompuesto extends Producto {
     private int cantidad;
     private double precio;
 
-    public ProductoCompuesto(String nombre, int codigo, int precioUnitario,
-                             String fechaDeVencimiento, int cantidad) throws ParseException {
+    public ProductoCompuesto(String nombre, int codigo, int precioUnitario, String fechaDeVencimiento, int cantidad) throws ParseException {
         super(nombre, codigo, precioUnitario, fechaDeVencimiento);
         this.cantidad = cantidad;
+
     }
 
     public int getCantidad() {

@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ *
  * @author
  */
 public class Transaccion {
@@ -23,8 +24,21 @@ public class Transaccion {
         productosVendidos = new ArrayList<>();
         this.codigoDeTransaccion = codigoDeTransaccion;
         this.fechaDeLaTransaccion = fechaDeLaTransaccion;
+//        DateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
+//        try {
+//            this.fechaDeLaTransaccion = formater.parse(fechaDeLaTransaccion);
+//        } catch (ParseException ex) {
+//            Logger.getLogger(Transaccion.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
 
+    public void setProductosVendidos(List<Producto> productosVendidos) {
+        this.productosVendidos = productosVendidos;
+    }
+
+    public void setTotalVenta(Double totalVenta) {
+        this.totalVenta = totalVenta;
+    }
     public void aniadirProducto(Producto producto) {
         productosVendidos.add(producto);
         totalVenta = totalVenta + producto.getPrecioUnitario();
@@ -32,10 +46,6 @@ public class Transaccion {
 
     public double getTotalVenta() {
         return totalVenta;
-    }
-
-    public void setTotalVenta(Double totalVenta) {
-        this.totalVenta = totalVenta;
     }
 
     public String getCodigoDeTransaccion() {
@@ -48,10 +58,6 @@ public class Transaccion {
 
     public List<Producto> getProductosVendidos() {
         return productosVendidos;
-    }
-
-    public void setProductosVendidos(List<Producto> productosVendidos) {
-        this.productosVendidos = productosVendidos;
     }
 
 

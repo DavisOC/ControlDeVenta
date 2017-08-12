@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ *
  * @author
  */
 public class ListaDeVentas {
@@ -31,6 +32,7 @@ public class ListaDeVentas {
 
     public void aniadirTransaccion(Transaccion transaccion) {
         listaDeVentas.add(transaccion);
+
     }
 
     public void eliminarTransaccion(Transaccion transaccion) {

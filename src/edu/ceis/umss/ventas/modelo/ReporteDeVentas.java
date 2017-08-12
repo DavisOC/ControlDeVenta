@@ -13,6 +13,7 @@ import java.text.ParseException;
 import java.util.List;
 
 /**
+ *
  * @author
  */
 public class ReporteDeVentas {
@@ -25,10 +26,6 @@ public class ReporteDeVentas {
         count = 0;
     }
 
-    public static void setReporteDeVentas(List<Transaccion> reporteDeVentas) {
-        ReporteDeVentas.reporteDeVentas = reporteDeVentas;
-    }
-
     public ListaDeVentas getListaDeVentas() {
         return listaDeVentas;
     }
@@ -36,6 +33,10 @@ public class ReporteDeVentas {
     public void setListaDeVentas(ListaDeVentas listaDeVentas) {
         reporteDeVentas = listaDeVentas.getListaDeVentas();
         this.listaDeVentas = listaDeVentas;
+    }
+
+    public static void setReporteDeVentas(List<Transaccion> reporteDeVentas) {
+        ReporteDeVentas.reporteDeVentas = reporteDeVentas;
     }
 
     public File generarArchivo(String ruta) throws ParseException {
@@ -63,9 +64,12 @@ public class ReporteDeVentas {
                 pw.println(" Costo Total de la Transaccion :  " + transaccion10.getTotalVenta() + " Bs");
                 pw.println("");
             }
+
         } catch (IOException e) {
         } finally {
             try {
+                // Nuevamente aprovechamos el finally para 
+                // asegurarnos que se cierra el fichero.
                 if (null != fichero) {
                     fichero.close();
                 }
@@ -73,5 +77,7 @@ public class ReporteDeVentas {
             }
         }
         return new File(ruta);
+
     }
+
 }
